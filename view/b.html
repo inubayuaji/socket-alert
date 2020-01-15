@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belajar Socket.IO</title>
+</head>
+<body>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/socket.io.js"></script>
+    <script>
+        // membuat socket ke server
+        var socket = io();
+
+        // fungsi ketika server mengirim pesan
+        socket.on('message', function(data){
+            // membuat alert di halaman bisa diganti dengan fungsi membuat bunyi
+            alert('muni ' + data);
+        });
+    </script>
+</body>
+</html>
